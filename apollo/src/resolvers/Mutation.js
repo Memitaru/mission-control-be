@@ -272,7 +272,7 @@ const updateProject = (_, args, context) => {
   return context.prisma.updateProject(args)
 }
 
-//KS CREATE-TAG
+//LAB23-T1 CREATE-TAG
 const createTag = (parent, args, context) => {
   const { id, name, isUsed } = args
   const tag = context.prisma.createTag({ id, name, isUsed })
@@ -284,7 +284,7 @@ const createTag = (parent, args, context) => {
   return tag
 }
 
-//KS DELETE-TAG
+//LAB23-T1 DELETE-TAG
 const deleteTag = async (parent, args, context) => {
   const { id } = args
   const deletedTag = await context.prisma.deleteTag({ id })
@@ -296,7 +296,7 @@ const deleteTag = async (parent, args, context) => {
   return deletedTag
 }
 
-//KS UPDATE-TAG
+//LAB23-T1 UPDATE-TAG
 const updateTag = async (parent, args, context) => {
   const { id, name, isUsed } = args
   const updateTag = await context.prisma.updateTag({

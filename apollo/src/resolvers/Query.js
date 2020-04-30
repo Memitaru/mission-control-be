@@ -208,7 +208,36 @@ const tag = (parent, args, context) => {
   return res
 }
 
-
+/**
+ Lab23-T1 Search Query
+4-30-2020
+ */
+async function feed(parent, args, context) {
+  const count = await context.prisma
+    .projectsConnection({
+      where: {
+        OR: [
+          { name_contains: args.filter },
+        ],
+      },
+    })
+    .aggregate()
+    .count()
+  const projects = await context.prisma.links({
+    where: {
+      OR: [
+        { name_contains: args.filter },
+      ],
+    },
+    skip: args.skip,
+    first: args.first,
+    orderBy: args.orderBy,
+  })
+  return {
+    count,
+    projects,
+  }
+}
 
 
 module.exports = {
@@ -233,5 +262,6 @@ module.exports = {
   githubPulse,
   me,
   tags,
-  tag
+  tag,
+  feed
 }

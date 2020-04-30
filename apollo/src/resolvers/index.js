@@ -18,8 +18,9 @@ const Note = require('./Note')
 const GithubRepo = require('./GithubRepo')
 const StatusCategory = require('./StatusCategory')
 
-//KS TAG
+//LAB23-T1 Tag resolver export
 const Tag = require('./Tag')
+const Feed = require('./Feed')
 
 const resolvers = {
   Query,
@@ -34,8 +35,9 @@ const resolvers = {
   Note,
   GithubRepo,
   StatusCategory,
-//KS TAG
-  Tag
+//LAB23-T1 TAG and Feed export
+  Tag,
+  Feed
 }
 
 module.exports = resolvers

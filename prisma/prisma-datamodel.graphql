@@ -168,6 +168,8 @@ type Person {
   email: String! @unique
   avatar: String
 
+
+
   # role: Role!
 
   # All of the notes authored by this person
@@ -207,7 +209,7 @@ type Role {
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 }
-#KS Tag and Connect Map
+#LAB23-T1 Tag and Connect Map
 type Tag {
 id: ID! @id
 createdAt: DateTime! @createdAt
@@ -219,5 +221,12 @@ isUsed:Boolean! @default(value: false)
 #project:Project @relation(name:"TagByProject")
 #program:Program @relation(name:"TagByProgram")
 #projectStatusElement:ProjectStatusElement @relation(name:"TagByStatus")
-
 }
+
+type Feed {
+  id:ID! @id
+  projects: [Project!]!
+  count: Int!
+}
+
+
