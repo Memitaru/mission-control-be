@@ -112,3 +112,5 @@ apollo/src/generated/prisma-client/prisma-schema.js
 **/build
 **/dist
 **/generated
+
+**/aws
