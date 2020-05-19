@@ -1,12 +1,6 @@
 EnvironmentName=production
 
 ApolloDockerImage=memitaru/missioncontrol:latest
-ApolloServicePort=8000
-PRISMA_ENDPOINT=https://prisma.missionctrl.dev
 
-PrismaServicePort=8000
 OAuthTokenEndpoint=https://dev-226426.okta.com/oauth2/default
 OAuthClientID=0oac5jtn2MBNSNAYS4x6
-
-
-APOLLO_CONTAINER_IMAGE=memitaru/missioncontrol:latest
