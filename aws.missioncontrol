@@ -1,5 +1,2 @@
 ApplicationName=missioncontrol
-ApplicationDomainNamespace=missioncontrol
-
-ApolloServicePort=8000
-PrismaServicePort=8000
+ApplicationDomainNamespace=djsimhketwy8d.amplifyapp.com
