@@ -1,6 +1,0 @@
-EnvironmentName=production
-
-ApolloDockerImage=memitaru/missioncontrol:latest
-
-OAuthTokenEndpoint=https://dev-226426.okta.com/oauth2/default
-OAuthClientID=0oac5jtn2MBNSNAYS4x6

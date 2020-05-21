@@ -1,0 +1,5 @@
+ApplicationName=missioncontrol
+ApplicationDomainNamespace=missioncontrol
+
+ApolloServicePort=8000
+PrismaServicePort=8000
