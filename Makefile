@@ -75,7 +75,7 @@ apollo-docker-build: prisma-generate
 	 printf "%s\n"   "= Building Apollo container image: $${APOLLO_CONTAINER_IMAGE}"														&& \
 	 printf "%s\n"   "======================================================================================"		&& \
 	 printf "$(NO_COLOR)"																																												&& \
-	 cd apollo && docker build -t $${APOLLO_CONTAINER_IMAGE} .
+	 cd apollo && docker build --no-cache -t $${APOLLO_CONTAINER_IMAGE} .
 
 apollo-push: apollo-docker-build
 	@export $$(cat .env | xargs)																																								&& \
@@ -381,7 +381,7 @@ aws-prisma-reseed: aws-env-banner
 	 printf "$(NO_COLOR)\n"																																											&& \
 	 printf "%s\n" "PRISMA_MANAGEMENT_API_SECRET: $${PRISMA_MANAGEMENT_API_SECRET}"															&& \
 	 printf "%s\n" "PRISMA_SECRET: $${PRISMA_SECRET}"																														&& \
-	 cd prisma && prisma reset --force && prisma seed
+	 cd prisma && prisma delete --force && prisma deploy --force
 
 
 # =================================================================
